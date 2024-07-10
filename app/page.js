@@ -46,8 +46,8 @@ const Home = () => {
     setLoading(true);
     
     const isCorrect = isFirstWaifu
-      ? firstFavorites > secondFavorites
-      : secondFavorites > firstFavorites;
+      ? firstFavorites >= secondFavorites
+      : secondFavorites >= firstFavorites;
     if (isCorrect) {
       incrementScore();
     } else {
