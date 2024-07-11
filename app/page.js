@@ -83,7 +83,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex items-center gap-4 justify-evenly">
+    <div className="flex items-center gap-4 flex-col justify-evenly">
       <div className="flex gap-8 justify-center h-full">
         {firstImage && (
           <Waifu

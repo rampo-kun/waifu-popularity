@@ -15,20 +15,20 @@ const Waifu = ({
     <div className="flex items-center gap-5">
       {!isFirst && (
         <FaRegArrowAltCircleUp
-          className={`size-20 hover:text-green-500 transition-colors duration-300 ${loading || revealed ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`size-20 hover:text-green-500 duration-300 transform transition-all hover:rotate-[360deg] ${loading || revealed ? 'opacity-50 cursor-not-allowed' : ''}`}
           onClick={(loading || revealed) ? undefined : onChoice}
         />
       )}
       <div className="flex flex-col items-center justify-center gap-4 mt-2">
         <Image
           src={imageUrl}
-          width={300}
-          height={300}
-          className="border-white border-2"
+          width={500}
+          height={500}
+          className="border-black border-8 w-auto h-80 bg-black"
           alt=""
         />
         <div>
-          <p>{name}</p>
+          <p className="font-Concert text-2xl">{name}</p>
         </div>
         {revealed ? (
           <CountUp end={favorites} duration={1} className="text-xl" />
@@ -38,7 +38,7 @@ const Waifu = ({
       </div>
       {isFirst && (
         <FaRegArrowAltCircleUp
-          className={`size-20 hover:text-green-500 transition-colors duration-300 ${loading || revealed ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`size-20 hover:text-green-500 duration-300 transform transition-all hover:rotate-[360deg] ${loading || revealed ? 'opacity-50 cursor-not-allowed' : ''}`}
           onClick={(loading || revealed) ? undefined : onChoice}
         />
       )}
