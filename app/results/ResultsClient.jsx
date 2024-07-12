@@ -13,7 +13,7 @@ const ResultsClient = () => {
   };
 
   return (
-    <div className="flex flex-col items-center container">
+    <div className="flex flex-col items-center container text-white">
       <div className="flex justify-center flex-col md:flex-row">
         <div className="text-center flex items-center justify-center p-10 flex-col gap-10 text-nowrap">
           <h1 className="text-8xl font-semibold font-Tiny5">Game Over :(</h1>
