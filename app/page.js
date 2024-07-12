@@ -86,8 +86,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex items-center gap-4 flex-col justify-evenly bg-black">
-      <div className="flex gap-8 justify-center h-full">
+    <div className="flex items-center gap-4 flex-col bg-black">
+      <div className="flex gap-8 h-full">
         {firstImage && (
           <Waifu
             imageUrl={firstImage}
@@ -100,7 +100,7 @@ const Home = () => {
             revealed={revealed}
           />
         )}
-          <HighScore highScore={highScore} />
+
         {secondImage && (
           <Waifu
             imageUrl={secondImage}
@@ -114,6 +114,7 @@ const Home = () => {
           />
         )}
       </div>
+                  <HighScore highScore={highScore} />
     </div>
   );
 };

@@ -13,8 +13,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-
+} from "@/components/ui/card";
 
 const Waifu = ({
   imageUrl,
@@ -37,43 +36,39 @@ const Waifu = ({
         />
       )}
       <div className="flex flex-col items-center justify-center gap-4 mt-2">
-      <Card>
-  <CardHeader>
-    <CardTitle>{name}</CardTitle>
-  </CardHeader>
-  <CardContent>
-    
-  <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger>
-              <Image
-                src={imageUrl}
-                width={500}
-                height={500}
-                className="border-black border-8 w-auto h-80 bg-black"
-                alt=""
-              />
-            </TooltipTrigger>
-            <TooltipContent side={`${isFirst?'left':'right'}`}>
-              <p>{anime}</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-
-  </CardContent>
-  <CardFooter>
-  {revealed ? (
-          <CountUp end={favorites} duration={1} className="text-xl" />
-        ) : (
-          <p className="text-xl">?</p>
-        )}
-  </CardFooter>
-</Card>
-
-        
-
-        
-        
+        <Card>
+          <CardHeader>
+            <CardTitle>{name}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger>
+                  <div className="w-40 h-60 relative">
+                    <Image
+                      src={imageUrl}
+                      layout="fill"
+                      objectFit="cover"
+                      quality={100}
+                      className="border-black border-8 bg-black "
+                      alt=""
+                    />
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent side={`${isFirst ? "left" : "right"}`}>
+                  <p>{anime}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </CardContent>
+          <CardFooter>
+            {revealed ? (
+              <CountUp end={favorites} duration={1} className="text-xl" />
+            ) : (
+              <p className="text-xl">?</p>
+            )}
+          </CardFooter>
+        </Card>
       </div>
       {isFirst && (
         <FaRegArrowAltCircleUp
